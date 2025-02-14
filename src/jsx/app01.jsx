@@ -53,7 +53,7 @@ export default function App01() {
         <div className="box-body">
           <div className="box-cards">
             <div className="inputs">
-              <p className="tittle-input">Card Holder</p>
+              <p className="tittle-input">Card Number</p>
               <input
                 type="text"
                 inputMode="numeric"
@@ -61,7 +61,7 @@ export default function App01() {
                 onChange={getInputNumber}
                 maxLength="16"
               />
-              <p className="tittle-input">Card Number</p>
+              <p className="tittle-input">Card Holder</p>
               <input type="text" maxLength="21" onChange={getInputName} />
             </div>
             <div className="dates">

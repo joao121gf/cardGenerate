@@ -123,3 +123,25 @@ button {
   bottom: 76px;
   color: white;
 }
+.infos {
+  display: flex;
+  justify-content: space-between;
+  width: 410px;
+}
+.infos p {
+  font-size: 20px;
+  color: white;
+}
+.flx {
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+.number {
+  font-size: 35px;
+  color: white;
+}
+.dvi {
+  position: relative;
+  bottom: -20px;
+}

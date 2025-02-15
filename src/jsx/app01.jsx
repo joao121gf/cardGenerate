@@ -14,7 +14,12 @@ export default function App01() {
     setNumber(numberInput);
   };
   let getInputNumber = (event) => {
-    setNumber(event.target.value.replace(/\D/g, ""));
+    let value = event.target.value;
+    if (value.length <= 16) {
+      setNumber(value);
+    } else {
+      setNumber(value.slice(0, 16));
+    }
   };
   const formatNumber = (num) => {
     return num.replace(/(\d{4})/g, "$1 ").trim();
@@ -55,11 +60,10 @@ export default function App01() {
             <div className="inputs">
               <p className="tittle-input">Card Number</p>
               <input
-                type="text"
+                type="number"
                 inputMode="numeric"
-                pattern="\d*"
-                onChange={getInputNumber}
-                maxLength="16"
+                onChange={(event) => getInputNumber(event)}
+                value={number}
               />
               <p className="tittle-input">Card Holder</p>
               <input type="text" maxLength="21" onChange={getInputName} />
